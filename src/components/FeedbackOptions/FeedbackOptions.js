@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import s from './FeedbackOtions.module.css';
+import PropTypes from 'prop-types';
 export function FeedbackOptions({ options, clickHandler }) {
   return (
     <div className={s.box}>
@@ -17,3 +18,7 @@ export function FeedbackOptions({ options, clickHandler }) {
     </div>
   );
 }
+FeedbackOptions.propTypes = {
+  optons: PropTypes.array,
+  clickHandler: PropTypes.func.isRequired,
+};
