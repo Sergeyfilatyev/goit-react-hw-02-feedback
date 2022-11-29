@@ -12,6 +12,7 @@ class App extends Component {
 
   addFeedback = ({ target }) => {
     const { feedback } = target.dataset;
+    console.log(target.dataset);
     this.setState(prevState => {
       return { [feedback]: prevState[feedback] + 1 };
     });
