@@ -4,15 +4,14 @@ import PropTypes from 'prop-types';
 export function FeedbackOptions({ options, clickHandler }) {
   return (
     <div className={s.box}>
-      {options.map(feedback => (
+      {options.map(option => (
         <button
           className={s.btn}
-          onClick={clickHandler}
+          onClick={() => clickHandler(option)}
           key={nanoid()}
           type="button"
-          data-feedback={feedback}
         >
-          {feedback}
+          {option}
         </button>
       ))}
     </div>
